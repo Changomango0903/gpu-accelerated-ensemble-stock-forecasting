@@ -112,7 +112,7 @@ def train_lightgbm(X, y, feature_names):
     lgb_params = {
         'n_estimators': 300,
         'learning_rate': 0.05,
-        'max_depth': 6,
+        'max_depth': 12,
         'num_leaves': 31,
         'random_state': 42
     }
@@ -162,7 +162,7 @@ def train_xgboost(X, y, feature_names):
     xgb_params = {
         'n_estimators': 300,
         'learning_rate': 0.05,
-        'max_depth': 6,
+        'max_depth': 12,
         'random_state': 42
     }
     
@@ -213,8 +213,8 @@ def train_lstm(X_windows, y_targets):
         'num_layers': 2,
         'dropout': 0.2,
         'learning_rate': 0.001,
-        'batch_size': 32,
-        'epochs': 50,  # Reduced for faster training
+        'batch_size': 64,
+        'epochs': 150,  # Reduced for faster training
         'patience': 10,
         'device': 'auto'
     }
