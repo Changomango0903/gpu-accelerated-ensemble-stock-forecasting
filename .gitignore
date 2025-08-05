@@ -210,3 +210,4 @@ __marimo__/
 *.npy
 *.png
 /reports
+/wandb
